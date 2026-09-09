@@ -33,8 +33,10 @@ export function ChatScreen({ connected, messages, users, typingUser, onSend, onT
           }
         }}
       >
-        <input name="message" className="border rounded px-3 py-2 flex-1" onChange={onTyping} placeholder="Type a message..." autoComplete="off" />
-        <button className="bg-blue-600 text-white px-4 py-2 rounded">Send</button>
+        <input name="message" className="border rounded px-3 py-2 flex-1" onChange={onTyping} placeholder="Type a message..." 
+        maxLength={500}
+        autoComplete="off" />
+        <button className="bg-blue-600 text-white px-4 py-2 rounded" type="submit">Send</button>
       </form>
     </div>
   );
