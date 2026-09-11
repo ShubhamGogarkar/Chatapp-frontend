@@ -5,12 +5,12 @@ import { ChatScreen } from './ChatScreen';
 
 export default function App() {
   const { connected, messages, users, typingUser, join, sendMessage, sendTyping } = useSocket();
-  const joined = useRef(false);
+  const [joined, setJoined] = useState(false);
   const lastTypingSent = useRef(0);
 
   function handleJoin(username) {
     join(username);
-    joined.current = true;
+    setJoined(true);
   }
 
   function handleTyping() {
@@ -21,7 +21,8 @@ export default function App() {
     }
   }
 
-  if (!joined.current) {
+
+  if (!joined) {
     return <JoinScreen onJoin={handleJoin} />;
   }
 
