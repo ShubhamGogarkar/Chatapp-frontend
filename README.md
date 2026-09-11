@@ -1,16 +1,30 @@
-# React + Vite
+# WebSocket Chat — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Tailwind + Vite client for [the WebSocket chat backend](https://chatapp-backend-nn1x.onrender.com).
 
-Currently, two official plugins are available:
+**Live demo:** [](your-frontend-url)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Running locally
+```bash
+npm install
+npm run dev
+```
+Requires the backend running locally too — see `.env.development` for the WS URL it expects (defaults to `ws://localhost:3006`).
 
-## React Compiler
+## Environment variables
+| Variable | Purpose | Local default |
+|---|---|---|
+| `VITE_WS_URL` | WebSocket URL of the backend to connect to | `ws://localhost:3006` |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
+- Real-time multi-client chat with a live online-users list
+- Typing indicator
+- Auto-reconnect with exponential backoff on dropped connections
+- Connection status indicator
 
-## Expanding the ESLint configuration
+## Tech stack
+React, Tailwind CSS, Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What I'd improve next
+- Persisted message history across reconnects
+- Toast-style error display instead of `alert()`
