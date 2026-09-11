@@ -1,6 +1,6 @@
 # WebSocket Chat — Frontend
 
-React + Tailwind + Vite client for [the WebSocket chat backend](https://chatapp-backend-nn1x.onrender.com).
+React + Tailwind + Vite client for [the WebSocket chat backend](https://github.com/ShubhamGogarkar/Chatapp-backend).
 
 **Live demo:** [https://chatapp-frontend-9heg.onrender.com](your-frontend-url)
 
