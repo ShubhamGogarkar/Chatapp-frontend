@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useSocket } from './useSocket';
 import { JoinScreen } from './JoinScreen';
 import { ChatScreen } from './ChatScreen';
