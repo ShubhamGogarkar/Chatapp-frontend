@@ -2,7 +2,7 @@
 
 React + Tailwind + Vite client for [the WebSocket chat backend](https://github.com/ShubhamGogarkar/Chatapp-backend).
 
-**Live demo:** [https://chatapp-frontend-9heg.onrender.com](your-frontend-url)
+**Live demo:** [https://chatapp-frontend-9heg.onrender.com](https://chatapp-frontend-9heg.onrender.com)
 
 ## Running locally
 ```bash
